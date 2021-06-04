@@ -38,7 +38,7 @@ export const addUser = (req, res) => {
 
     if (!isValidUser(user)) return res.status(400).send('Wrong input')
 
-    const id = users.length + 1;
+    const id = users.length + 1
     user = { id, ...user }
     users.push(user)
     res.send(user)

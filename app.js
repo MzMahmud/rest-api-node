@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use('/users', usersRouter)
 
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`)
 })
 
 app.get('/', (req, res) => {
