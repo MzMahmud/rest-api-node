@@ -47,15 +47,13 @@ export const addUser = (req, res) => {
 export const updateUser = (req, res) => {
     const id = req.params.id
     const newUser = req.body
-    let modiedUser
     for (let user of users) {
         if (user.id == id) {
             patchUser(user, newUser)
-            modiedUser = user
             return res.send(user)
         }
     }
-    res.status(400).send(modiedUser)
+    res.status(400).send('No user found')
 }
 
 export const deleteUser = (req, res) => {
